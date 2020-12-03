@@ -13,18 +13,18 @@ public class calculatorTest {
     }
     @Test
     public void testSum() {
-        int result = calculator.sum(3, 23);
-        Assert.assertEquals(26, result);
+        int result = calculator.sum(40, 6);
+        Assert.assertEquals(46, result);
     }
 
     @Test
     public void testMinus() {
-        Assert.assertEquals(2, calculator.minus(22, 20));
+        Assert.assertEquals(4, calculator.minus(20,16));
     }
 
     @Test
     public void testDivid() {
-        Assert.assertEquals(2, calculator.divid(6, 3));
+        Assert.assertEquals(4, calculator.divid(12, 3));
     }
 
     @Test
@@ -33,17 +33,28 @@ public class calculatorTest {
     }
 
     @Test
-    public void testMin() {
+	public void testMin(){
+		int min = calculator.min(10,20);bash: t: command not found
+
+                Assert.assertEquals(20,max);
+	}
+    @Test 
+	public void testMax(){
+		int max = calculator.max(2000, -2000);
+		Assert.assertEquals(2000,max);
+	}
+    @Test
+    public void testMinElement() {
         int tab[]={51, 24, 19, 5, 37, 76, 61, 99, 101, 36};
         int a=calculator.minElement(tab);
         Assert.assertEquals(5,a);
     }
 
     @Test
-    public void testMax() {
-        int tab[]={51, 24, 19, 5, 37, 76, 61, 99, 101, 36,2,4,7,8};
+    public void testMaxElement() {
+        int tab[]={51, 24, 19, 5, 37, 76, 61, 99, 300, 36,2,4,7,8};
         int max=calculator.maxElement(tab);
-        Assert.assertEquals(101,max);
+        Assert.assertEquals(300,max);
 
     }
 
