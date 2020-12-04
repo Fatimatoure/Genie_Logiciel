@@ -8,6 +8,65 @@
     <artifactId>test_unitaires</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <artifactId>maven-clean-plugin</artifactId>
+  <version>3.1.1-SNAPSHOT</version>
+  <packaging>maven-plugin</packaging>
+
+  <name>Apache Maven Clean Plugin</name>
+  <description>
+    The Maven Clean Plugin is a plugin that removes files generated at build-time in a project's directory.
+  </description>
+  <inceptionYear>2001</inceptionYear>
+
+  <prerequisites>
+    <maven>${mavenVersion}</maven>
+  </prerequisites>
+
+  <scm>
+    <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-clean-plugin.git</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-clean-plugin.git</developerConnection>
+    <url>https://github.com/apache/maven-clean-plugin/tree/${project.scm.tag}</url>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <system>JIRA</system>
+    <url>https://issues.apache.org/jira/browse/MCLEAN</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://ci-builds.apache.org/job/Maven/job/maven-box/job/maven-clean-plugin/</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>apache.website</id>
+      <url>scm:svn:https://svn.apache.org/repos/asf/maven/website/components/${maven.site.path}</url>
+    </site>
+  </distributionManagement>
+
+  <properties>
+    <mavenVersion>3.0</mavenVersion>
+    <javaVersion>7</javaVersion>
+    <project.build.outputTimestamp>2020-04-07T21:04:00Z</project.build.outputTimestamp>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.shared</groupId>
+      <artifactId>maven-shared-utils</artifactId>
+      <version>3.2.1</version>
+    </dependency>
+
+    <!-- dependencies to annotations -->
+    <dependency>
+      <groupId>org.apache.maven.plugin-tools</groupId>
+      <artifactId>maven-plugin-annotations</artifactId>
+      <scope>provided</scope>
+    </depen
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
