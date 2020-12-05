@@ -34,9 +34,7 @@ public class calculatorTest {
 
     @Test
 	public void testMin(){
-		int min = calculator.min(10,20);bash: t: command not found
-
-                Assert.assertEquals(20,max);
+		Assert.assertEquals(2, calculator.minus(22, 20));
 	}
     @Test 
 	public void testMax(){
